@@ -33,12 +33,13 @@ img{
     justify-content: center;
     align-items: center;
     margin-top: 10rem ;
+    gap: 1rem;
 }
 .score-board{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 4vmin;
     gap: 3rem;
     color: white;
     
