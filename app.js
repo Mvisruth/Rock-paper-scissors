@@ -1,16 +1,23 @@
 let userScore = 0;
 let computerScore = 0;
 
+const msg = document.getElementById('msg')
+
 const drawGame = ()=>{
   console.log("Game was Draw");
 }
 
 const showWinner = (userWin)=>{
   if(userWin){
+    msg.innerHTML = "you win"
+    msg.style.background = "green"
+    document.getElementById('user-score').innerText = userScore+=1
     console.log("you win");
   }else{
+    msg.innerHTML = "Computer win"
+        msg.style.background = "red"
+    document.getElementById('computer-score').innerText = computerScore+=1
     console.log("computer win");
-    
   }
 }
 
