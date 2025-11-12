@@ -15,15 +15,16 @@ const genComputerChoice = () => {
 const playGame = (userChoice) => {
   //user choice
   console.log("user Choice = ", userChoice);
-  //Computer Choice
+  //Genrate Computer Choice
+  const cmpChoice = genComputerChoice()
+  console.log("computer Choice = ", cmpChoice);
+  score(userChoice,cmpChoice)
 };
 
 choices.forEach((choice) => {
   choice.addEventListener("click", () => {
     //Get the id value of this element and store it in the variable choiceId
     const userChoice = choice.getAttribute("id");
-    console.log("choice was clicked");
     playGame(userChoice);
-    genComputerChoice();
   });
 });
