@@ -5,6 +5,7 @@ const msg = document.getElementById('msg')
 
 const drawGame = ()=>{
   console.log("Game was Draw");
+  msg.innerText="Game was Draw.Play again"
 }
 
 const showWinner = (userWin)=>{
