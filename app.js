@@ -1,6 +1,19 @@
 let userScore = 0;
 let computerScore = 0;
 
+const drawGame = ()=>{
+  console.log("Game was Draw");
+}
+
+const showWinner = (userWin)=>{
+  if(userWin){
+    console.log("you win");
+  }else{
+    console.log("computer win");
+    
+  }
+}
+
 const choices = document.querySelectorAll(".choice");
 //Computer Choice
 const genComputerChoice = () => {
@@ -18,7 +31,20 @@ const playGame = (userChoice) => {
   //Genrate Computer Choice
   const cmpChoice = genComputerChoice()
   console.log("computer Choice = ", cmpChoice);
-  score(userChoice,cmpChoice)
+
+  if(userChoice===cmpChoice){
+    drawGame()
+  }else{
+    let userWin = true
+    if(userChoice=="rock"){
+      userWin = cmpChoice =="paper"?false:true
+    }else if(userChoice=="paper"){
+      userWin = cmpChoice =="scissors"?false:true
+    }else{
+      userWin = cmpChoice =="rock"?false:true
+    }
+    showWinner(userWin)
+  }
 };
 
 choices.forEach((choice) => {
