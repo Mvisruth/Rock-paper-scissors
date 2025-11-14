@@ -3,12 +3,12 @@ let computerScore = 0;
 let move = 0;
 
 const msg = document.getElementById("msg");
-
+// Match draw
 const drawGame = () => {
   console.log("Game was Draw");
   msg.innerText = "Game was Draw.Play again";
 };
-
+//show Winner 
 const showWinner = (userWin) => {
   if (userWin) {
     msg.innerHTML = "you win";
